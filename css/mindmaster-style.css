@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+
+:root { 
+  font-size: 16px;
+  font-family: "Open Sans";
+  --text-primary: #ececec;
+  --text-secondary: #b6b6b6;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418; 
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+::-webkit-scrollbar { 
+    width: 0.5rem;
+  }
+  
+  ::-webkit-scrollbar-track { 
+    background: #1e1e24;
+  }
+  
+  ::-webkit-scrollbar-thumb{ 
+    background: #555555
+  }
+
+  embed:focus{
+    outline: none;
+  }
+
+.protocol{
+  margin-left: 28vh;
+  outline: none;
+}
+
+body{
+  background-color: var(--bg-secondary);
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--bg-primary);
+    font-family: "Poppins", sans-serif;
+  }
+  
+    .logo {
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+  }
+
+  .logo a{
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-primary);
+  }
+  
+.text{
+  color: var(--text-primary);
+  margin: 15vh;
+  text-align: center;
+}
+
+.img{
+  padding-top: 80vh;
+}

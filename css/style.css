@@ -1,0 +1,313 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+
+:root { /* selecteerd de document zijn root element */ 
+  font-size: 16px;
+  font-family: "Open Sans";
+  --text-primary: #ececec; /* deze 4 kleuren zijn zo dat bij alles wat ik doe, kan ik deze 4 kleuren weer gebruiken door var() te gebruiken */
+  --text-secondary: #b6b6b6;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418; 
+}
+
+* { /* "*" selecteerd alle elementen */ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* -webkit is een browser engine van apple voor safari/chrome, en werkt op alle platformen, blink bijvoorbeeld van google werkt niet op IOS */
+/* Ik weet alleen van het gebruiken van webkit, over andere weet ik niet, hier gebruik ik webkit om de scrollbar te veranderen */
+/* Vaak wordt webkit als standaard gebruikt voor de opmaak, webkit zelf is een niet-standaard psuedo element*/
+
+::-webkit-scrollbar { /*  de scrollbar zelf */
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track { /* de track van de scrollbar, dus wat er achter de scrollbar zit  */
+  background: #1e1e24;
+}
+
+::-webkit-scrollbar-thumb{ /* de staaf die je beweegt */
+  background: #555555
+}
+
+/* #abc selecteerd de element met id="abc"  */ 
+
+#outlook {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Microsoft_Office_Outlook_%282013%E2%80%932018%29.svg/1200px-Microsoft_Office_Outlook_%282013%E2%80%932018%29.svg.png);
+}
+
+#onenote {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Microsoft_OneNote-Logo.svg/1200px-Microsoft_OneNote-Logo.svg.png);
+}
+
+#todo {
+  background-image: url(https://to-do-cdn.microsoft.com/static-assets/c87265a87f887380a04cf21925a56539b29364b51ae53e089c3ee2b2180148c6/icons/logo.png);
+}
+
+#mindmaster {
+  background-image: url(https://cdnp2.stackassets.com/06ab1a8bfd644e7879eb8de2e259501a5b1a9ffc/store/cd7eea49d76ef45cf6438224235c37083dada40322e10193d16edc02c8b3/sale_27952_primary_image.jpg);
+}
+
+
+#trello {
+  background-image: url(https://marketplace.mypurecloud.com/28895253-eb3b-4743-a0f9-a3ba430a6e2f/applogo_c43650ce.png);
+}
+
+#visio {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_Visio_%282013%E2%80%932019%29.svg/1200px-Microsoft_Office_Visio_%282013%E2%80%932019%29.svg.png);
+}
+
+#section1 {
+  height: 980px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+#section2 {
+  height: 980px;
+  background-color: var(--bg-secondary);
+}
+
+#section3 {
+  height: 980px;
+  background-color: var(--bg-secondary);
+}
+
+#section4-0 {
+  height: 247px;
+  background-color: var(--bg-secondary);
+}
+
+#section4-1 {
+  height: 247px;
+  background-color: var(--bg-secondary);
+}
+
+.section-t1{
+  color: var(--text-primary);
+  text-align: center;
+  padding: 45vh;
+  font-size: 32px;
+}
+
+.section-t2{
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.section-t2{
+  display:grid; 
+}
+
+.section-t2 h1{
+  padding-top: 20vh;
+  font-size: 36px;
+}
+
+.section-t2 img{
+  height: 960px;
+  margin-top: -86vh;
+  margin-left: -80vh;
+}
+
+.section-t2 p{
+  padding: 15vh;
+  font-size: 30px;
+  text-align: left;
+  padding-left: 100vh;
+}
+
+.section-t3{
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.section-t3 h1{
+  padding-top: 12vh;
+  font-size: 36px;
+}
+
+.section-t3 p{
+  font-size: 30px;
+  padding-top: 5vh;
+}
+
+
+.section-t3 li{
+  font-size: 30px;
+}
+
+
+
+.section-t40 {
+  color: var(--text-primary);
+  text-align: center;
+  padding: 8vh;
+}
+/* dit is van de projecten selector */ 
+
+.container {
+  display: flex;
+  height: 45vh;
+}
+
+.container a{
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: flex .4s ease;
+  position: relative;
+}
+
+.section .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color .8s ease;
+}
+
+.section .content {
+  z-index: 2;
+}
+
+.section:hover {
+  flex: 2;
+}
+
+.section:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* dit is van de navbar boven aan */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--bg-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Dit is voor de burger en de animatie ervan in de mobile view */
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+      width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+      overflow-x: hidden;
+  }
+  
+  .nav-links {
+      position: fixed;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: var(--bg-secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+  
+  .nav-links li {
+      opacity: 0;
+  }
+  
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+}
+
+.nav-active {
+      transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* animatie van de burger naar een 'X' in de mobile view */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
